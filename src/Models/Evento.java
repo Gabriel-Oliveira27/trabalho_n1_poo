@@ -58,4 +58,13 @@ public class Evento {
         else return false;
     }
 
+    public boolean liberarVaga(){
+        if(vagasDisponiveis < capacidadeMaxima){
+            vagasDisponiveis = vagasDisponiveis + 1;
+            return true;
+        }
+
+        else return false;
+    }
+
 }
