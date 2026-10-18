@@ -21,19 +21,19 @@ public class Inscricao {
 
         } else if (evento.ocuparVaga()) {
             this.situacao = "Confirmada";
-            System.out.println("Inscrição confirmada!");
+            System.out.println("Inscrição confirmada no evento: " + evento.getNomeEvento());
             
         } else {
             this.situacao = "Cancelada";
-            System.out.println("Esse evento está lotado.");
-        };
+            System.out.println("O evento " + evento.getNomeEvento() + " está lotado.");
+        }
     }
 
     public void cancelar(){
         if (situacao.equals("Confirmada")){
             evento.liberarVaga();
             this.situacao = "Cancelada";
-            System.out.println("Inscrição cancelada.");
+            System.out.println("Inscrição cancelada no evento: " + evento.getNomeEvento());
         }
         else {
             System.out.println("Inscrição já está cancelada.");
